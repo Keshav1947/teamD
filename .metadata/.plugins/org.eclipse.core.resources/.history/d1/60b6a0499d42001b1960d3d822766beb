@@ -1,0 +1,5 @@
+package com.coforge.repository;
+
+public interface BranchRepository {
+
+}

@@ -1,0 +1,12 @@
+package com.coforge.service;
+
+import com.coforge.model.Branch;
+
+import java.util.List;
+
+public interface BranchService {
+	public void createBranch(Branch branch);
+	public List<Branch> getAllBranch();
+	public void
+
+}

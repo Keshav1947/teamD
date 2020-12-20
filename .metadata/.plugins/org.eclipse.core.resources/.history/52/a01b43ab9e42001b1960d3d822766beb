@@ -1,0 +1,51 @@
+package com.coforge.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.coforge.model.Branch;
+import com.coforge.repository.BranchRepository;
+@Service
+public class BranchServiceImp implements BranchService{
+
+	@Autowired
+	BranchRepository repository;
+	@Override
+	public void createBranch(Branch branch) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Branch> getAllBranch() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteBranch(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Branch fingOne(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void updateBranch(Branch branch, Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateAvailability(Branch branch, Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
