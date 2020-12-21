@@ -26,6 +26,8 @@ public class Manager {
 	private String email;
 	private boolean availability;
 	
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(referencedColumnName = "id")
 	private Branch branch;
 	
 	public Manager() {
@@ -46,9 +48,6 @@ public class Manager {
 		this.branch = branch;
 	}
 
-
-	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
 		return Id;
 	}
@@ -119,12 +118,10 @@ public class Manager {
 	}
 
 
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(referencedColumnName = "id")
+
 	public Branch getBranch() {
 		return branch;
 	}
-
 
 	public void setBranch(Branch branch) {
 		this.branch = branch;

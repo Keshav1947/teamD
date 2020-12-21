@@ -22,6 +22,7 @@ public class Customer {
 	private int registrationNo;
 	private String phoneNo;
 	private String customerName;
+	
 	@ManyToOne(fetch = FetchType.LAZY, optional=false)
 	@JoinColumn(referencedColumnName= "id", nullable = false)
 	@JsonBackReference
@@ -91,6 +92,11 @@ public class Customer {
 
 	public void setBranch(Branch branch) {
 		this.branch = branch;
+	}
+	@Override
+	public String toString() {
+		return "Customer [Id=" + Id + ", age=" + age + ", gender=" + gender + ", registrationNo=" + registrationNo
+				+ ", phoneNo=" + phoneNo + ", customerName=" + customerName + ", branch=" + branch + "]";
 	}
 	
 	

@@ -24,13 +24,12 @@ public class Branch  {
 	private String district;
 	private String state;
 	private boolean availability;
+	
 	@OneToMany(mappedBy = "branch", fetch = FetchType.LAZY,
 			cascade = CascadeType.REMOVE)
 	@JsonManagedReference
 	private Set<Customer> customer;
-	
-	
-	
+		
 	public Branch() {
 		// TODO Auto-generated constructor stub
 	}
@@ -41,6 +40,7 @@ public class Branch  {
 		this.state = state;
 		this.availability = availability;
 	}
+	
 	public Long getId() {
 		return Id;
 	}
