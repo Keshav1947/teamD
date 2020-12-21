@@ -4,9 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.coforge.model.Branch;
 import com.coforge.model.Manager;
-import com.coforge.repository.BranchRepository;
 import com.coforge.repository.ManagerRepository;
 @Service
 public class ManagerServiceImp implements ManagerService{

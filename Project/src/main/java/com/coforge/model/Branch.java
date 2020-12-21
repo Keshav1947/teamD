@@ -1,20 +1,36 @@
 package com.coforge.model;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "branchs")
-public class Branch {
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+public class Branch  {
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
 	private String district;
 	private String state;
 	private boolean availability;
+	@OneToMany(mappedBy = "branch", fetch = FetchType.LAZY,
+			cascade = CascadeType.REMOVE)
+	@JsonManagedReference
+	private Set<Customer> customer;
+	
+	
+	
 	public Branch() {
 		// TODO Auto-generated constructor stub
 	}

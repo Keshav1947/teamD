@@ -2891,3 +2891,74 @@ java.lang.Exception: File not found: G:\Team D Project\My Working\Project1\src\t
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:46.081
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:46.087
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@259f0fdb[org.springframework.tooling.boot.ls:1.23.0.202010230633(id=673)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:46.093
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:47.965
+!MESSAGE Boot LS startup time from start to initialized: 1867ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:48.045
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.TchRlrZtisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:48.050
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:48.055
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:48.061
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:48.067
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:48.073
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.TchRlrZt => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:48.078
+!MESSAGE classpath=96 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:48.087
+!MESSAGE buffering callback sts4.classpath.TchRlrZt Project false 96
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:48.092
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:48.097
+!MESSAGE classpath=6 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:48.102
+!MESSAGE buffering callback sts4.classpath.TchRlrZt Project1 false 6
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:48.107
+!MESSAGE executing callback sts4.classpath.TchRlrZt 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:22:48.132
+!MESSAGE executing callback sts4.classpath.TchRlrZt SUCCESS [done]
+
+!ENTRY org.eclipse.core.resources 2 2 2020-12-21 10:25:35.950
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2020-12-21 10:25:35.950
+!MESSAGE The project description file (.project) for 'Project1' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:30:12.044
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:30:12.051
+!MESSAGE classpath=1 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:30:12.059
+!MESSAGE buffering callback sts4.classpath.TchRlrZt Project1 false 1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:30:12.065
+!MESSAGE executing callback sts4.classpath.TchRlrZt 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-21 10:30:12.075
+!MESSAGE executing callback sts4.classpath.TchRlrZt SUCCESS [done]
