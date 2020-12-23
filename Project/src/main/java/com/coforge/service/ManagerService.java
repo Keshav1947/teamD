@@ -9,6 +9,6 @@ public interface ManagerService {
 	public List<Manager> getAllManager();
 	public void deleteManager(Long id);
 	public Manager findOne(Long id);
-	public void updateAvailability(Manager manager, Long id);
+	public void updateManager(Manager manager,Long id);
 
 }

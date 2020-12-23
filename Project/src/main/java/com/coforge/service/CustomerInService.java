@@ -8,6 +8,7 @@ public interface CustomerInService {
 	public CustomerIn createCustomerIn(CustomerIn customerIn);
 	public List<CustomerIn> getAllCustomerIn();
 	public CustomerIn findOne(Long id);
+	
 
 
 }

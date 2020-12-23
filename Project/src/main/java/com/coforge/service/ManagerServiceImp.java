@@ -33,8 +33,8 @@ public class ManagerServiceImp implements ManagerService{
 	}
 
 	@Override
-	public void updateAvailability(Manager manager, Long id) {
-		repo.updateavailability(manager.getAvailability(),id);
+	public void updateManager(Manager manager, Long id) {
+		repo.updatemanager(manager.getPhoneno(),manager.getAddress(),manager.getAvailability(),id);
 		
 	}
 

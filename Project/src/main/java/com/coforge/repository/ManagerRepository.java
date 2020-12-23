@@ -14,7 +14,7 @@ import com.coforge.model.Manager;
 public interface ManagerRepository extends JpaRepository<Manager, Long> {
 
 		
-	@Transactional @Modifying @Query("UPDATE Branch SET availability =:availability WHERE id =:id")
-	void updateavailability(@Param("availability")boolean availability, @Param("id") Long id);
+	@Transactional @Modifying @Query("UPDATE Manager SET phoneno =:phoneno, address =:address,availability =:availability WHERE id =:id")
+	void updatemanager(@Param("phoneno")String phoneno,@Param("address")String address,@Param("availability")boolean availability, @Param("id") Long id);
 
 }

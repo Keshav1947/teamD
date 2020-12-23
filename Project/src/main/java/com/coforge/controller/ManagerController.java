@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -68,4 +69,14 @@ public class ManagerController {
 		response.put("deleted", true);
 		return response;
 	}
+	@PutMapping("/manager/{id}")
+    public ResponseEntity<Manager> updateManager(@PathVariable(value = "id") Long managerId,
+         @Valid @RequestBody Manager managerDetails) throws ResourceNotFoundException {
+        Manager manager = ms.findOne(managerId);
+        manager.setPhoneno(managerDetails.getPhoneno());
+        manager.setAddress(managerDetails.getAddress());
+        manager.setAvailability(managerDetails.getAvailability());
+        final Manager updatedManager = ms.createManager(manager);
+        return ResponseEntity.ok(updatedManager);
+    }
 }

@@ -25,7 +25,7 @@ public class Branch  {
 	private String state;
 	private boolean availability;
 	
-	@OneToMany(mappedBy = "branch", fetch = FetchType.LAZY,
+	@OneToMany(mappedBy = "branch", fetch = FetchType.EAGER,
 			cascade = CascadeType.REMOVE)
 	@JsonManagedReference
 	private Set<Customer> customer;
