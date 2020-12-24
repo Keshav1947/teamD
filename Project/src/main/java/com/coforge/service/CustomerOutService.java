@@ -10,5 +10,6 @@ public interface CustomerOutService {
 	public void deleteCustomerOut(Long id);
 	public CustomerOut findOne(Long id);
 //	public void updateAvailability(CustomerIn manager, Long id);
+	public long days(long id);
 
 }

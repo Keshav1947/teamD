@@ -60,18 +60,18 @@ public class CustomerOutController {
 	
 	
 	
-	@PostMapping("customerout/{id}/{inid}")
+	@PostMapping("customerout/{id}")
 	public CustomerOut createCustomerOut(@Valid @RequestBody CustomerOut customerOut,
-			@PathVariable(value ="id") Long customerId, @PathVariable(value ="inid") Long cid) {
-		Customer findById = cs.findOne(customerId);
+			@PathVariable(value ="id") Long customerId) {
 		
-		CustomerIn find = ci.findOne(cid);
+		Customer findById = cs.findOne(customerId);
+		String find = ci.datein(customerId);
 		
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd MM yyyy");
 		
 		try {
 			 System.out.println ("Day1: " + find);
-		    LocalDate date1 = LocalDate.parse(find.getDatein(), dtf);
+		    LocalDate date1 = LocalDate.parse(find, dtf);
 		    System.out.println ("Day1: " + date1);
 		    LocalDate date2 = LocalDate.parse(customerOut.getDateout(), dtf);
 		    System.out.println ("Day2: " + date2);

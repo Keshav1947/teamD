@@ -32,4 +32,10 @@ public class CustomerInServiceImp implements CustomerInService{
 		return repository.findById(id).get();
 	}
 
+	@Override
+	public String datein(Long customerId) {
+		// TODO Auto-generated method stub
+		return repository.datein(customerId);
+	}
+
 }

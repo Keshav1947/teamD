@@ -1,7 +1,6 @@
 package com.coforge.model;
 
-import java.io.Serializable;
-import java.util.Date;
+
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -13,7 +12,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity

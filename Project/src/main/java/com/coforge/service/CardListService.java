@@ -12,5 +12,7 @@ public interface CardListService {
 	public List<CardList> getAllCardList();
 	public CardList findOne(Long id);
 	public void deleteCardList(Long id);
+	public Long cardId(Long id);
+	public long card(Long cardListId);
 	
 }

@@ -11,7 +11,8 @@ import com.coforge.model.Card;
 
 public interface CardRepository  extends JpaRepository<Card, Long>{ 
 	
-	
+//	@Transactional @Query("SELECT discount FROM Card where id = :id")
+//	long dis(@Param("id") Long id);
 
 	@Transactional @Modifying @Query("UPDATE Card SET availability =:availability,amount =:amount,discount =:discount,duration =:duration,group_limit =:group_limit  WHERE id =:id")
 	void update(@Param("availability")boolean availability, 

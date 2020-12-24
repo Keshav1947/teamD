@@ -46,7 +46,7 @@ public class BranchServiceImp implements BranchService{
 	@Override
 	public void updateAvailability(Branch branch, Long id) {
 		// TODO Auto-generated method stub
-		repository.updateavailability(branch.getAvailability(),id);
+		repository.updateavailability(branch.isAvailability(),id);
 		
 	}
 

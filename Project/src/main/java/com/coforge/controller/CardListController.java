@@ -65,17 +65,7 @@ public class CardListController {
 		return cls.createCardList(cardlist);	
 	}
 	
-//	@PutMapping("/cardlist/{id}")
-//	public ResponseEntity<Customer> updateCustomer(@PathVariable(value="id") Long customerId,
-//			@Valid @RequestBody Customer customerDetails) throws ResourceNotFoundException{
-//		Customer customer = cls.findOne(customerId );
-//		customer.setAge(customerDetails.getAge());
-//		customer.setPhoneNo(customerDetails.getPhoneNo());
-//		final Customer updatedCustomer = cls.createCustomer(customer);
-//		return ResponseEntity.ok(updatedCustomer);
-//	}
-//	
-//	
+
 	@DeleteMapping("/cardlist/{id}")
 	public Map<String, Boolean> deleteCardList(@PathVariable (value = "id") Long id)
 	throws ResourceNotFoundException{

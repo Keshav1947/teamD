@@ -60,7 +60,7 @@ public class BranchController {
 	public ResponseEntity<Branch> updateBranchAvailability(@PathVariable(value="id") Long branchId,
 			@Valid @RequestBody Branch branchDetails) throws ResourceNotFoundException{
 		Branch branch = bs.findOne(branchId);
-		branch.setAvailability(branchDetails.getAvailability());
+		branch.setAvailability(branchDetails.isAvailability());
 		final Branch updatedBranch = bs.createBranch(branch);
 		return ResponseEntity.ok(updatedBranch);
 	}

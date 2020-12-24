@@ -47,6 +47,12 @@ public class CardServiceImpl implements CardService{
 	}
 
 //	@Override
+//	public long discount(Long cardListId) {
+//		// TODO Auto-generated method stub
+//		return crepository.dis(cardListId);
+//	}
+
+//	@Override
 //	public Card updateCard(Card card, Long id) {
 //		// TODO Auto-generated method stub
 //		card crepository.save(card);

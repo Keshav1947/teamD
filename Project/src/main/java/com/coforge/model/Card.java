@@ -29,9 +29,7 @@ public class Card {
 	
 	private boolean availability;
 
-	@OneToMany(mappedBy = "card", fetch = FetchType.LAZY,
-			cascade = CascadeType.REMOVE)
-			private Set<CardList> cardList;
+	
 
 	public Card() {
 		// TODO Auto-generated constructor stub
@@ -54,15 +52,6 @@ public class Card {
 	
 
 
-	public Set<CardList> getCardList() {
-		return cardList;
-	}
-
-
-
-	public void setCardList(Set<CardList> cardList) {
-		this.cardList = cardList;
-	}
 
 
 
@@ -122,11 +111,7 @@ public class Card {
 		this.availability = availability;
 	}
 
-	@Override
-	public String toString() {
-		return "Card [Id=" + Id + ", name=" + name + ", group_limit=" + group_limit + ", discount=" + discount
-				+ ", amount=" + amount + ", duration=" + duration + ", availability=" + availability + "]";
-	}
+	
 	
     	
 

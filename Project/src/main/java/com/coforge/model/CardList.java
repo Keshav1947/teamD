@@ -1,6 +1,5 @@
 package com.coforge.model;
 
-import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -28,16 +27,24 @@ public class CardList {
     @JoinColumn(referencedColumnName = "id")
 	private Customer customer;
 	
-	@JsonFormat(pattern = "yyyy/MM/dd")
-	private Date date;
+	
+	private String carddate;
 	
 	@ManyToOne(fetch = FetchType.LAZY, optional=false)
 	@JoinColumn(referencedColumnName= "id", nullable = false)
-	@JsonBackReference
+//	@JsonBackReference
 	private Card card;
 	
 	public CardList() {
 		// TODO Auto-generated constructor stub
+	}
+
+	public CardList(Long id, Customer customer, String carddate, Card card) {
+		super();
+		Id = id;
+		this.customer = customer;
+		this.carddate = carddate;
+		this.card = card;
 	}
 
 	public Long getId() {
@@ -48,22 +55,6 @@ public class CardList {
 		Id = id;
 	}
 
-	public Card getCard() {
-		return card;
-	}
-
-	public void setCard(Card card) {
-		this.card = card;
-	}
-
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
 	public Customer getCustomer() {
 		return customer;
 	}
@@ -72,18 +63,28 @@ public class CardList {
 		this.customer = customer;
 	}
 
-	public CardList(Long id, Card card, Date date, Customer customer) {
-		super();
-		Id = id;
+	public String getCarddate() {
+		return carddate;
+	}
+
+	public void setCarddate(String carddate) {
+		this.carddate = carddate;
+	}
+
+	public Card getCard() {
+		return card;
+	}
+
+	public void setCard(Card card) {
 		this.card = card;
-		this.date = date;
-		this.customer = customer;
 	}
 
 	@Override
 	public String toString() {
-		return "CardList [Id=" + Id + ", card=" + card + ", date=" + date + ", customer=" + customer + "]";
+		return "CardList [Id=" + Id + ", customer=" + customer + ", carddate=" + carddate + ", card=" + card + "]";
 	}
+
+	
 	
 	
 	

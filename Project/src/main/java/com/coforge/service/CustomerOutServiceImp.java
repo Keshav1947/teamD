@@ -39,4 +39,11 @@ public class CustomerOutServiceImp implements CustomerOutService{
 		return repo.getOne(id);
 	}
 
+	@Override
+	public long days(long id) {
+		// TODO Auto-generated method stub
+		
+		return repo.days(id);
+	}
+
 }

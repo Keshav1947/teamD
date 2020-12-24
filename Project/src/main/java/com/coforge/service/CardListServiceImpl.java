@@ -38,4 +38,16 @@ public class CardListServiceImpl implements CardListService {
 		repository.deleteById(id);
 	}
 
+	@Override
+	public Long cardId(Long id) {
+		// TODO Auto-generated method stub
+		return repository.cardId(id);
+	}
+
+	@Override
+	public long card(Long cardListId) {
+		// TODO Auto-generated method stub
+		return repository.card(cardListId);
+	}
+
 }

@@ -16,5 +16,8 @@ public interface CustomerOutRepository extends JpaRepository<CustomerOut, Long> 
 //		
 //	@Transactional @Modifying @Query("UPDATE Branch SET availability =:availability WHERE id =:id")
 //	void updateavailability(@Param("availability")boolean availability, @Param("id") Long id);
+	
+	@Transactional @Query("SELECT totalDays FROM CustomerOut  where customer_id = :customer_id")
+	long days(@Param("customer_id") long customer_id);
 
 }

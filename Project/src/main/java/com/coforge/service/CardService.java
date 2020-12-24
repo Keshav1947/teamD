@@ -12,4 +12,5 @@ public interface CardService {
 	public void deleteCard(Long id);
 	public Card findOne(Long id);
 	public void updateCard(Card card,Long id);
+//	public long discount(Long cardListId);
 }
